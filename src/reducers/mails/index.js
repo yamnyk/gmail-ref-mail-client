@@ -8,7 +8,6 @@ import mailList from "../../dummy-data/dummy";
 
 const initialState = {
 	mailList: {...mailList},
-	showNewMailForm: false,
 	isEmailListUpdatng: false,
 };
 
@@ -26,3 +25,5 @@ function mails(state = initialState, action) {
 			return {...state};
 	}
 }
+
+export default mails;

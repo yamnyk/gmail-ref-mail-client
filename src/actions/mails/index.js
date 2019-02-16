@@ -22,3 +22,14 @@ export function delEmail(delID, mailList) {
 		}
 	);
 }
+
+export function updateEmailList() {
+	return (dispatch) => {
+		dispatch({
+			type: START_UPDATE_EMAIL_LIST,
+		});
+		setTimeout(() => {
+			dispatch({type:SUCCESS_UPDATE_EMAIL_LIST});
+		}, 5000)
+	}
+}
