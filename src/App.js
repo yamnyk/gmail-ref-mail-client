@@ -7,7 +7,7 @@ import DashBoard from "./components/DashBoard";
 
 class App extends Component {
 	newMailFormToggle = () => {
-	
+		//TODO: realise function using local component state
 	};
 	render() {
 		return (
