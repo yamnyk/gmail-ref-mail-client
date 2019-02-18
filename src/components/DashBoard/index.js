@@ -4,7 +4,7 @@ class DashBoard extends Component {
     render() {
         return (
             <div>
-            
+	            {/*mailList or single mail depends of redirect*/}
             </div>
         );
     }

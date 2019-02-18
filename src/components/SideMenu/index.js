@@ -1,13 +1,29 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { connect } from "react-redux";
+import NewMailButton from "./NewMailButton";
+import './SideMenu.scss'
 
 class SideMenu extends Component {
-    render() {
-        return (
-            <div>
-            
-            </div>
-        );
-    }
+
+	render() {
+		return (
+			<div className="side-menu">
+				<NewMailButton />
+				
+			</div>
+		);
+	}
 }
 
-export default SideMenu;
+const mapStateToProps = (store) => {
+	return {
+		newMailFormToggle : store.newMailFormToggle,
+		isEmailListUpdatng : store.isEmailListUpdatng,
+	};
+};
+
+const mapDispatchToProps = (dispatch) => {
+	return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SideMenu);
