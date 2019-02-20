@@ -4,6 +4,15 @@ export const TOGGLE_NEW_MAIL_FORM = 'TOGGLE_NEW_MAIL_FORM';
 export const START_UPDATE_EMAIL_LIST = 'START_UPDATE_EMAIL_LIST';
 export const SUCCESS_UPDATE_EMAIL_LIST = 'SUCCESS_UPDATE_EMAIL_LIST';
 
+export function switchFolder(folder) {
+	return (dispatch) => (
+		dispatch({
+			payload: {
+				currentFolder: folder
+			}
+		})
+	);
+}
 
 export function toggleNewMail() {
 	return (dispatch) => {

@@ -20,6 +20,7 @@ const mapStateToProps = (store) => {
 	return {
 		newMailFormToggle : store.newMailFormToggle,
 		isEmailListUpdatng : store.isEmailListUpdatng,
+		currentFolder: store.currentFolder,
 	};
 };
 

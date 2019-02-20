@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { connect } from "react-redux";
 import Header from "./components/Header";
-import SideMenu from "./components/SideMenu";
-import DashBoard from "./components/DashBoard";
+
 import './App.scss';
-import ModalWithForm from "./components/ModalWithForm";
+import WorkingArea from "./components/WorkingArea";
 
 class App extends Component {
 	render() {
@@ -13,10 +12,8 @@ class App extends Component {
 			<div className="container">
 				<Header />
 				<Switch>
-					<Route path="/" component={SideMenu} />
-					<Route path="/" component={DashBoard} />
+					<Route path="/" component={WorkingArea}/>
 				</Switch>
-				{this.props.newMailFormToggle ? <ModalWithForm /> : null}
 			</div>
 		);
 	}
