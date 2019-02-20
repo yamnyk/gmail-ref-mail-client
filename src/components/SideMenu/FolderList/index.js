@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import { connect } from "react-redux";
-import DashBoardItem from "../../DashBoard/DashBoardItem";
-
+import FolderItem from "./FolderItem";
+import "./FolderList.scss"
 
 class FolderList extends Component {
-	collectPropNames(object) {
+	static collectPropNames(object) {
 		const res = [];
 		for(let prop in object) {
 			res.push(prop);
@@ -13,13 +13,15 @@ class FolderList extends Component {
 	}
 	
 	render() {
-		const folders = this.collectPropNames(this.props.mailList).map((folder,index) => {
-			return <DashBoardItem key={index<<folder.length} folderName={folder}/>
+		const folders = FolderList.collectPropNames(this.props.mailList).map((folder, index) => {
+			return (
+				<FolderItem key={index<<folder.length} folderName={folder}/>
+			)
 		});
 		
 		return (
 			<ul className="folder-list">
-				{folders}
+					{folders}
 			</ul>
 		);
 	}

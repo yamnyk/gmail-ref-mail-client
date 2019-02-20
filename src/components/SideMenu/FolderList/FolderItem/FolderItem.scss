@@ -1,0 +1,12 @@
+.dash-board-item {
+  box-sizing: border-box;
+  font-size: 2rem;
+  text-align: right;
+  padding: 2rem 2rem;
+  cursor: pointer;
+  transition: 0.3s background-color ease;
+  
+  &:hover {
+    background-color: #dfdfdf;
+  }
+}

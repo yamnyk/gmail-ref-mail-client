@@ -4,6 +4,7 @@
   bottom: 2rem;
   right: 10rem;
   width: 30rem;
+  background-color: #6e6e6e;
 }
 
 .mail-modal {
@@ -61,14 +62,23 @@
     align-items: flex-end;
 
     &__field {
+      border: none;
       box-sizing: border-box;
       width: 80%;
-      margin: 1.5rem 0;
+      margin: 1.5rem 2rem 1.5rem 0;
       padding: 1rem 2rem;
 
       &:first-of-type {
         margin-top: 3rem;
       }
+    }
+
+    &__btn {
+      border: none;
+      background-color: #2c2c2caf;
+      color: #fff;
+      padding: 1rem 2rem;
+      margin: 1.5rem 2rem 3rem 0;
     }
   }
 }

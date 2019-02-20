@@ -1,7 +1,7 @@
 export const SEND_EMAIL = 'SEND_EMAIL';
 export const DEL_EMAIL = 'DEL_EMAIL';
 export const TOGGLE_NEW_MAIL_FORM = 'TOGGLE_NEW_MAIL_FORM';
-export const TOGGLE_UPDATE_EMAIL_LIST = 'TOGGLE_UPDATE_EMAIL_LIST';
+export const START_UPDATE_EMAIL_LIST = 'START_UPDATE_EMAIL_LIST';
 export const SUCCESS_UPDATE_EMAIL_LIST = 'SUCCESS_UPDATE_EMAIL_LIST';
 
 
@@ -35,7 +35,7 @@ export function delEmail(delID, mailList) {
 export function updateEmailList() {
 	return (dispatch) => {
 		dispatch({
-			type: TOGGLE_UPDATE_EMAIL_LIST,
+			type: START_UPDATE_EMAIL_LIST,
 		});
 		setTimeout(() => {
 			dispatch({type:SUCCESS_UPDATE_EMAIL_LIST});
