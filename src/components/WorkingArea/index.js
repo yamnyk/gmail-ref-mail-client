@@ -12,7 +12,6 @@ class WorkingArea extends Component {
 			<div className="working-area">
 				<SideMenu />
 				<DashBoard />
-				{console.log('state in working area: ', this.props )}
 				{this.props.newMailFormToggle ? <ModalWithForm /> : null}
 			</div>
 		);

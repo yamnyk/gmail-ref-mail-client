@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './NewMailButton.scss';
 import { connect } from "react-redux";
-import {TOGGLE_NEW_MAIL_FORM, toggleNewMail} from "../../../actions/mails";
+import { toggleNewMail } from "../../../actions/mails";
 
 class NewMailButton extends Component {
 	render() {

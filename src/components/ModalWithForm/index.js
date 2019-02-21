@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import './ModalWithForm.scss'
-import {TOGGLE_NEW_MAIL_FORM, toggleNewMail} from "../../actions/mails";
+import { toggleNewMail } from "../../actions/mails";
 
 class ModalWithForm extends Component {
 	render() {
