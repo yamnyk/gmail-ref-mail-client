@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
 import SideMenu from "../SideMenu";
 import DashBoard from "../DashBoard";
 import ModalWithForm from "../ModalWithForm";
@@ -11,10 +12,17 @@ class WorkingArea extends Component {
 			<div className="working-area">
 				<SideMenu />
 				<DashBoard />
+				{console.log('state in working area: ', this.props )}
 				{this.props.newMailFormToggle ? <ModalWithForm /> : null}
 			</div>
 		);
 	}
 }
 
-export default WorkingArea;
+const mapStateToProps = (store) => {
+	return {
+		newMailFormToggle: store.mails.newMailFormToggle
+	}
+};
+
+export default connect(mapStateToProps)(WorkingArea);

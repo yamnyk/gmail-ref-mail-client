@@ -3,7 +3,8 @@ import {
 	DEL_EMAIL,
 	TOGGLE_NEW_MAIL_FORM,
 	START_UPDATE_EMAIL_LIST,
-	SUCCESS_UPDATE_EMAIL_LIST
+	SUCCESS_UPDATE_EMAIL_LIST,
+	SWITCH_CURRENT_FOLDER
 } from '../../actions/mails'
 import mailList from "../../dummy-data/dummy";
 
@@ -17,6 +18,8 @@ const initialState = {
 
 function mails(state = initialState, action) {
 	switch (action.type) {
+		case SWITCH_CURRENT_FOLDER:
+			return{...state, ...action.payload};
 		case TOGGLE_NEW_MAIL_FORM:
 			return {...state, newMailFormToggle: !state.newMailFormToggle};
 		case SEND_EMAIL:

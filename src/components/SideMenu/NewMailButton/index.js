@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './NewMailButton.scss';
 import { connect } from "react-redux";
-import { TOGGLE_NEW_MAIL_FORM } from "../../../actions/mails";
+import {TOGGLE_NEW_MAIL_FORM, toggleNewMail} from "../../../actions/mails";
 
 class NewMailButton extends Component {
 	render() {
@@ -22,7 +22,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		toggleNewMail : () => {
-			dispatch({type: TOGGLE_NEW_MAIL_FORM})
+			dispatch(toggleNewMail())
 		},
 	}
 };
