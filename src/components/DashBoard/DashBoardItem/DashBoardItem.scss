@@ -1,6 +1,8 @@
 .dash-board-item {
   text-transform: lowercase;
   margin: 0 2rem 2rem;
+  cursor: pointer;
+  outline: none;
 
   &__subject {
     font-weight: 600;

@@ -8,6 +8,7 @@
   margin-bottom: 3rem;
   cursor: pointer;
   transition: 0.2s box-shadow ease;
+  outline: none;
 
   &:hover {
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
