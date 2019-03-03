@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { NavLink } from "react-router-dom";
 import './FolderItem.scss'
 
 class FolderItem extends Component {
@@ -7,7 +8,12 @@ class FolderItem extends Component {
 		console.log(switchFolder);
 		return (
 			<>
-				<li className="folder-item" onClick={()=>{switchFolder(folderName)}}>{this.props.folderName}</li>
+				<li  onClick={()=>{switchFolder(folderName)}}>
+					<NavLink to="/" className="folder-item">
+						{this.props.folderName}
+					</NavLink>
+				</li>
+			
 			</>
 		);
 	}
