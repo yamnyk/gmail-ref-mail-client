@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import { connect } from "react-redux";
+import { Route, Switch } from 'react-router-dom';
 import DashBoardItem from "./DashBoardItem";
 
 import './DashBoard.scss'
+import MailPage from "./MailPage";
 
 class DashBoard extends Component {
 	state = {
@@ -25,10 +27,17 @@ class DashBoard extends Component {
 		let mails = this.props.mailList[this.props.currentFolder].map((mail, index) => {
 			return <DashBoardItem currentActiveMail={this.state.activeMail} openEmailText={this.openEmailText} key={Math.random()*(10**(Math.random()*100))} {...mail}/>
 		});
+		
 		return (
-			<ul className="dash-board-wrapper">
-				{mails}
-			</ul>
+			<Switch>
+				<Route path="/mail/:id" component={MailPage}/>
+				<Route path="/" component={() => (
+					<ul className="dash-board-wrapper">
+						{mails}
+					</ul>
+				)}/>
+			</Switch>
+			
 		);
 	}
 }
