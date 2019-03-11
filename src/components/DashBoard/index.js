@@ -5,6 +5,7 @@ import DashBoardItem from "./DashBoardItem";
 
 import './DashBoard.scss'
 import MailPage from "./MailPage";
+import ToolBar from "./ToolBar";
 
 class DashBoard extends Component {
 	state = {
@@ -33,6 +34,7 @@ class DashBoard extends Component {
 				<Route path="/mail/:id" component={MailPage}/>
 				<Route path="/" component={() => (
 					<ul className="dash-board-wrapper">
+						<ToolBar/>
 						{mails}
 					</ul>
 				)}/>
